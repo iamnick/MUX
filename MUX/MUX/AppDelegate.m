@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "CreateEditTeam.h"
+#import "CreateEditPlayer.h"
 
 @implementation AppDelegate
 
@@ -16,8 +18,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    UIViewController *mainScreenView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainScreenView];
+    UIViewController *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }

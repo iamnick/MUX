@@ -30,6 +30,8 @@
 		820F6B141777EDA800FF444E /* GamePageBatting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B121777EDA800FF444E /* GamePageBatting.xib */; };
 		820F6B181777EDD100FF444E /* GamePageFielding.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B161777EDD100FF444E /* GamePageFielding.m */; };
 		820F6B191777EDD100FF444E /* GamePageFielding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B171777EDD100FF444E /* GamePageFielding.xib */; };
+		820F6B1C1779810400FF444E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B1B1779810400FF444E /* CustomCell.m */; };
+		820F6B1E1779812D00FF444E /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B1D1779812D00FF444E /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,9 @@
 		820F6B151777EDD100FF444E /* GamePageFielding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePageFielding.h; sourceTree = "<group>"; };
 		820F6B161777EDD100FF444E /* GamePageFielding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePageFielding.m; sourceTree = "<group>"; };
 		820F6B171777EDD100FF444E /* GamePageFielding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GamePageFielding.xib; sourceTree = "<group>"; };
+		820F6B1A1779810400FF444E /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		820F6B1B1779810400FF444E /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		820F6B1D1779812D00FF444E /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +140,9 @@
 				820F6B151777EDD100FF444E /* GamePageFielding.h */,
 				820F6B161777EDD100FF444E /* GamePageFielding.m */,
 				820F6B171777EDD100FF444E /* GamePageFielding.xib */,
+				820F6B1A1779810400FF444E /* CustomCell.h */,
+				820F6B1B1779810400FF444E /* CustomCell.m */,
+				820F6B1D1779812D00FF444E /* CustomCell.xib */,
 			);
 			path = MUX;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 				820F6B0F1777ED7F00FF444E /* TeamPage.xib in Resources */,
 				820F6B141777EDA800FF444E /* GamePageBatting.xib in Resources */,
 				820F6B191777EDD100FF444E /* GamePageFielding.xib in Resources */,
+				820F6B1E1779812D00FF444E /* CustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +243,7 @@
 				820F6B0E1777ED7F00FF444E /* TeamPage.m in Sources */,
 				820F6B131777EDA800FF444E /* GamePageBatting.m in Sources */,
 				820F6B181777EDD100FF444E /* GamePageFielding.m in Sources */,
+				820F6B1C1779810400FF444E /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

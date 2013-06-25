@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CreateEditTeam.h"
+#import "CustomCell.h"
 
 @interface ViewController ()
 
@@ -18,6 +20,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Nav Controller
+    self.title = @"Roster Buddy";
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,9 +45,9 @@
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-	}
-    cell.textLabel.text = @"TEST";
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:self options:nil];
+        cell = [views objectAtIndex:0];
+    }    cell.textLabel.text = @"TEST";
     
     UIFont *cellFont = [ UIFont fontWithName: @"Marker Felt" size: 17.0f];
 	cell.textLabel.font  = cellFont;
@@ -49,10 +55,10 @@
 	return cell;
 }
 
-/*
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+	CreateEditTeam *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
+	[self.navigationController pushViewController:createEditTeamView animated:true];
 }
-*/
+
 @end
