@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GamePageBatting : UIViewController
+@interface GamePageBatting : UIViewController <UITabBarControllerDelegate>
+
+@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

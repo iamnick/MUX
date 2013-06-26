@@ -11,6 +11,9 @@
 #import "ViewController.h"
 #import "CreateEditTeam.h"
 #import "CreateEditPlayer.h"
+#import "TeamPage.h"
+#import "GamePageBatting.h"
+#import "GamePageFielding.h"
 
 @implementation AppDelegate
 
@@ -21,6 +24,9 @@
     UIViewController *mainScreenView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainScreenView];
     UIViewController *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
+    UIViewController *createEditPlayerView = [[CreateEditPlayer alloc] initWithNibName:@"CreateEditPlayer" bundle:nil];
+    UIViewController *teamPageView = [[TeamPage alloc] initWithNibName:@"TeamPage" bundle:nil];
+    
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;

@@ -7,6 +7,7 @@
 //
 
 #import "GamePageBatting.h"
+#import "GamePageFielding.h"
 
 @interface GamePageBatting ()
 

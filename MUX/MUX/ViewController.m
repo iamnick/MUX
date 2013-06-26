@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "CreateEditTeam.h"
 #import "CustomCell.h"
+// remove later
+#import "GamePageBatting.h"
+#import "GamePageFielding.h"
 
 @interface ViewController ()
 
@@ -57,8 +60,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	CreateEditTeam *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
-	[self.navigationController pushViewController:createEditTeamView animated:true];
+	UITabBarController *tabBarController=[[UITabBarController alloc] init];
+	GamePageBatting *gamePageBattingView = [[GamePageBatting alloc] initWithNibName:@"GamePageBatting" bundle:nil];
+    GamePageFielding *gamePageFieldingView = [[GamePageFielding alloc] initWithNibName:@"GamePageFielding" bundle:nil];
+    tabBarController.viewControllers = @[gamePageBattingView, gamePageFieldingView];
+    
+    
+    [self.navigationController pushViewController:tabBarController animated:true];
 }
 
 @end
