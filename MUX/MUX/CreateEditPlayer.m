@@ -7,6 +7,7 @@
 //
 
 #import "CreateEditPlayer.h"
+#import "Dataholder.h"
 
 @interface CreateEditPlayer ()
 

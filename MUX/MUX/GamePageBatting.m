@@ -7,7 +7,8 @@
 //
 
 #import "GamePageBatting.h"
-#import "GamePageFielding.h"
+#import "CustomCell.h"
+#import "Dataholder.h"
 
 @interface GamePageBatting ()
 

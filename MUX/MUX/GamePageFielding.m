@@ -7,6 +7,8 @@
 //
 
 #import "GamePageFielding.h"
+#import "CustomCell.h"
+#import "Dataholder.h"
 
 @interface GamePageFielding ()
 

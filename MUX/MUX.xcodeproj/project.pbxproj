@@ -33,6 +33,10 @@
 		820F6B1C1779810400FF444E /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B1B1779810400FF444E /* CustomCell.m */; };
 		820F6B1E1779812D00FF444E /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B1D1779812D00FF444E /* CustomCell.xib */; };
 		820F6B20177AA44F00FF444E /* field.png in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B1F177AA44F00FF444E /* field.png */; };
+		820F6B24177B58EC00FF444E /* cellbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B23177B58EC00FF444E /* cellbg.png */; };
+		820F6B27177B5B4E00FF444E /* DataHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B26177B5B4E00FF444E /* DataHolder.m */; };
+		820F6B2A177B5DC600FF444E /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B29177B5DC500FF444E /* Team.m */; };
+		820F6B2D177B5DD700FF444E /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B2C177B5DD700FF444E /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,13 @@
 		820F6B1B1779810400FF444E /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		820F6B1D1779812D00FF444E /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		820F6B1F177AA44F00FF444E /* field.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = field.png; sourceTree = "<group>"; };
+		820F6B23177B58EC00FF444E /* cellbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellbg.png; sourceTree = "<group>"; };
+		820F6B25177B5B4E00FF444E /* DataHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataHolder.h; sourceTree = "<group>"; };
+		820F6B26177B5B4E00FF444E /* DataHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHolder.m; sourceTree = "<group>"; };
+		820F6B28177B5DC500FF444E /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		820F6B29177B5DC500FF444E /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		820F6B2B177B5DD700FF444E /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		820F6B2C177B5DD700FF444E /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +130,7 @@
 		820F6ADD1777E20500FF444E /* MUX */ = {
 			isa = PBXGroup;
 			children = (
+				820F6B23177B58EC00FF444E /* cellbg.png */,
 				820F6B1F177AA44F00FF444E /* field.png */,
 				820F6AFC1777E4E100FF444E /* logo.png */,
 				820F6AFA1777E35800FF444E /* bg.png */,
@@ -146,6 +158,12 @@
 				820F6B1A1779810400FF444E /* CustomCell.h */,
 				820F6B1B1779810400FF444E /* CustomCell.m */,
 				820F6B1D1779812D00FF444E /* CustomCell.xib */,
+				820F6B25177B5B4E00FF444E /* DataHolder.h */,
+				820F6B26177B5B4E00FF444E /* DataHolder.m */,
+				820F6B28177B5DC500FF444E /* Team.h */,
+				820F6B29177B5DC500FF444E /* Team.m */,
+				820F6B2B177B5DD700FF444E /* Player.h */,
+				820F6B2C177B5DD700FF444E /* Player.m */,
 			);
 			path = MUX;
 			sourceTree = "<group>";
@@ -229,6 +247,7 @@
 				820F6B191777EDD100FF444E /* GamePageFielding.xib in Resources */,
 				820F6B1E1779812D00FF444E /* CustomCell.xib in Resources */,
 				820F6B20177AA44F00FF444E /* field.png in Resources */,
+				820F6B24177B58EC00FF444E /* cellbg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +267,9 @@
 				820F6B131777EDA800FF444E /* GamePageBatting.m in Sources */,
 				820F6B181777EDD100FF444E /* GamePageFielding.m in Sources */,
 				820F6B1C1779810400FF444E /* CustomCell.m in Sources */,
+				820F6B27177B5B4E00FF444E /* DataHolder.m in Sources */,
+				820F6B2A177B5DC600FF444E /* Team.m in Sources */,
+				820F6B2D177B5DD700FF444E /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

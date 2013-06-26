@@ -7,6 +7,8 @@
 //
 
 #import "TeamPage.h"
+#import "CustomCell.h"
+#import "Dataholder.h"
 
 @interface TeamPage ()
 
