@@ -13,4 +13,6 @@
 	IBOutlet UILabel *headerLabel;
 	IBOutlet UITableView *tableView;
 }
+
+-(void)onHomeClick;
 @end

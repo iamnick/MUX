@@ -26,6 +26,7 @@
     // Nav Controller
     self.title = @"Roster Buddy";
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
     
     // Initialize Singleton
     [DataHolder CreateInstance];

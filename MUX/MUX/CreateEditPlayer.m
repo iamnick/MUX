@@ -28,6 +28,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // Nav Controller
+    self.title = @"Edit Player";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(onHomeClick)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,4 +46,8 @@
     [self.navigationController popViewControllerAnimated:true];
 }
 
+-(void)onHomeClick
+{
+	[self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

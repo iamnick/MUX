@@ -14,5 +14,5 @@
 }
 
 -(IBAction)onClick:(id)sender;
-
+-(void)onHomeClick;
 @end

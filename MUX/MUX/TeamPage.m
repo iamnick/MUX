@@ -32,6 +32,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // Nav Controller
+    self.title = @"Orioles";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(onHomeClick)];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +83,11 @@
 	UITabBarController *tabBarController=[[UITabBarController alloc] init];
 	GamePageBatting *gamePageBattingView = [[GamePageBatting alloc] initWithNibName:@"GamePageBatting" bundle:nil];
     GamePageFielding *gamePageFieldingView = [[GamePageFielding alloc] initWithNibName:@"GamePageFielding" bundle:nil];
+    gamePageBattingView.title = @"Batting Order";
+    gamePageFieldingView.title = @"Field Positions";
+    
     tabBarController.viewControllers = @[gamePageBattingView, gamePageFieldingView];
+    
     [self.navigationController pushViewController:tabBarController animated:true];
 }
 
@@ -87,6 +96,11 @@
 	// Manage Team Button
     CreateEditTeam *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
     [self.navigationController pushViewController:createEditTeamView animated:true];
+}
+
+-(void)onHomeClick
+{
+	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

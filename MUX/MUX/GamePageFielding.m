@@ -29,6 +29,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // Nav Controller
+    self.title = @"Field Positions";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(onHomeClick)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,6 +90,11 @@
     } else {
     	inningLabel.text = @"Inning: 6th";
     }
+}
+
+-(void)onHomeClick
+{
+	[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end
