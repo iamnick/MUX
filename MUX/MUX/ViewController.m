@@ -56,15 +56,17 @@
     }
     
     // Cell Text
+    UILabel *cellLabel = (UILabel*)[cell viewWithTag:1];
+    UILabel *arrowLabel = (UILabel*)[cell viewWithTag:2];
     if (indexPath.row == 0) {
-    	cell.textLabel.text = @"Orioles";
+    	//cell.textLabel.text = @"Orioles";
+    	cellLabel.text = @"Orioles";
     } else {
-    	cell.textLabel.text = @"Create New Team";
+    	cellLabel.text = @"Create New Team";
     }
+    arrowLabel.text = @">";
     
-    // Cell Font/Background
-    UIFont *cellFont = [UIFont fontWithName: @"Marker Felt" size: 17.0f];
-	cell.textLabel.font  = cellFont;
+    // Cell Background
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
 
 	return cell;
@@ -72,6 +74,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	if (indexPath.row == 0) {
     	// Team Page
         TeamPage *teamPageView = [[TeamPage alloc] initWithNibName:@"TeamPage" bundle:nil];

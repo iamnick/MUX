@@ -63,15 +63,16 @@
     }
     
     // Cell Text
+    UILabel *cellLabel = (UILabel*)[cell viewWithTag:1];
+    UILabel *arrowLabel = (UILabel*)[cell viewWithTag:2];
     if (indexPath.row == 0) {
-    	cell.textLabel.text = @"Friday, June 19th";
+    	cellLabel.text = @"Friday, June 19th";
     } else {
-    	cell.textLabel.text = @"New Game";
+    	cellLabel.text = @"New Game";
     }
+    arrowLabel.text = @">";
     
-    // Cell Font/Background
-    UIFont *cellFont = [UIFont fontWithName: @"Marker Felt" size: 17.0f];
-	cell.textLabel.font  = cellFont;
+    // Cell Background
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
 
 	return cell;
@@ -79,15 +80,27 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 	// Since we are using static dummy data, load the same view for both existing game and new game
 	UITabBarController *tabBarController=[[UITabBarController alloc] init];
 	GamePageBatting *gamePageBattingView = [[GamePageBatting alloc] initWithNibName:@"GamePageBatting" bundle:nil];
     GamePageFielding *gamePageFieldingView = [[GamePageFielding alloc] initWithNibName:@"GamePageFielding" bundle:nil];
+    // These set the text of the tabs at the bottom
     gamePageBattingView.title = @"Batting Order";
     gamePageFieldingView.title = @"Field Positions";
     
-    tabBarController.viewControllers = @[gamePageBattingView, gamePageFieldingView];
+    // This sets the title of the nav bar on both of the tabs
+    tabBarController.title = @"Batting Order";
     
+    // This adds a home button to the nav bar
+    tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(onHomeClick)];
+    
+    // Add icons to tab bar
+    gamePageBattingView.tabBarItem.image = [UIImage imageNamed:@"first.png"];
+    gamePageFieldingView.tabBarItem.image = [UIImage imageNamed:@"second.png"];
+    
+    tabBarController.viewControllers = @[gamePageBattingView, gamePageFieldingView];
     [self.navigationController pushViewController:tabBarController animated:true];
 }
 

@@ -29,10 +29,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    // Nav Controller
-    self.title = @"Field Positions";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(onHomeClick)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,11 +55,12 @@
     }
     
     // Cell Text
-    cell.textLabel.text = @"Player";
+    UILabel *cellLabel = (UILabel*)[cell viewWithTag:1];
+    UILabel *posLabel = (UILabel*)[cell viewWithTag:2];
+    cellLabel.text = @"Player";
+    posLabel.text = @"Pos";
     
-    // Cell Font/Background
-    UIFont *cellFont = [UIFont fontWithName: @"Marker Felt" size: 17.0f];
-	cell.textLabel.font  = cellFont;
+    // Cell Background
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
 
 	return cell;
@@ -91,10 +88,4 @@
     	inningLabel.text = @"Inning: 6th";
     }
 }
-
--(void)onHomeClick
-{
-	[self.navigationController popToRootViewControllerAnimated:YES];
-}
-
 @end

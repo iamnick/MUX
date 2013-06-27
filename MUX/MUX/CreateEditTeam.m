@@ -62,11 +62,10 @@
     }
     
     // Cell Text
-    cell.textLabel.text = @"Add players using the icon above.";
+    UILabel *cellLabel = (UILabel*)[cell viewWithTag:1];
+    cellLabel.text = @"Add players using the icon above.";
     
-    // Cell Font/Background
-    UIFont *cellFont = [ UIFont fontWithName: @"Marker Felt" size: 17.0f];
-	cell.textLabel.font  = cellFont;
+    // Cell Background
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
 
 	return cell;

@@ -38,6 +38,8 @@
 		820F6B2A177B5DC600FF444E /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B29177B5DC500FF444E /* Team.m */; };
 		820F6B2D177B5DD700FF444E /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B2C177B5DD700FF444E /* Player.m */; };
 		820F6B30177C066600FF444E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B2F177C066600FF444E /* Game.m */; };
+		820F6B36177CFB8800FF444E /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B34177CFB8600FF444E /* first.png */; };
+		820F6B37177CFB8800FF444E /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 820F6B35177CFB8700FF444E /* second.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,8 @@
 		820F6B2C177B5DD700FF444E /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		820F6B2E177C066500FF444E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		820F6B2F177C066600FF444E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		820F6B34177CFB8600FF444E /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		820F6B35177CFB8700FF444E /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 		820F6ADD1777E20500FF444E /* MUX */ = {
 			isa = PBXGroup;
 			children = (
+				820F6B34177CFB8600FF444E /* first.png */,
+				820F6B35177CFB8700FF444E /* second.png */,
 				820F6B23177B58EC00FF444E /* cellbg.png */,
 				820F6B1F177AA44F00FF444E /* field.png */,
 				820F6AFC1777E4E100FF444E /* logo.png */,
@@ -253,6 +259,8 @@
 				820F6B1E1779812D00FF444E /* CustomCell.xib in Resources */,
 				820F6B20177AA44F00FF444E /* field.png in Resources */,
 				820F6B24177B58EC00FF444E /* cellbg.png in Resources */,
+				820F6B36177CFB8800FF444E /* first.png in Resources */,
+				820F6B37177CFB8800FF444E /* second.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
