@@ -8,14 +8,9 @@
 
 #import "ViewController.h"
 #import "CreateEditTeam.h"
+#import "TeamPage.h"
 #import "CustomCell.h"
-#import "Dataholder.h"
-#import "Team.h"
-#import "Player.h"
-
-// remove later
-#import "GamePageBatting.h"
-#import "GamePageFielding.h"
+#import "DataHolder.h"
 
 @interface ViewController ()
 
@@ -46,8 +41,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	// return the number of teams loaded + 1 for the create option
-	return ([[[DataHolder GetInstance] teamArray] count] + 1);
+	return 2;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -60,11 +54,14 @@
         cell = [views objectAtIndex:0];
     }
     
-    if (indexPath.row > ([[[DataHolder GetInstance] teamArray] count]-1)) {
-    	cell.textLabel.text = @"Create New Team";
+    // Cell Text
+    if (indexPath.row == 0) {
+    	cell.textLabel.text = @"Orioles";
     } else {
-    	cell.textLabel.text = [[[[DataHolder GetInstance] teamArray] objectAtIndex:indexPath.row] teamName];
+    	cell.textLabel.text = @"Create New Team";
     }
+    
+    // Cell Font/Background
     UIFont *cellFont = [UIFont fontWithName: @"Marker Felt" size: 17.0f];
 	cell.textLabel.font  = cellFont;
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
@@ -74,13 +71,15 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITabBarController *tabBarController=[[UITabBarController alloc] init];
-	GamePageBatting *gamePageBattingView = [[GamePageBatting alloc] initWithNibName:@"GamePageBatting" bundle:nil];
-    GamePageFielding *gamePageFieldingView = [[GamePageFielding alloc] initWithNibName:@"GamePageFielding" bundle:nil];
-    tabBarController.viewControllers = @[gamePageBattingView, gamePageFieldingView];
-    
-    
-    [self.navigationController pushViewController:tabBarController animated:true];
+	if (indexPath.row == 0) {
+    	// Team Page
+        TeamPage *teamPageView = [[TeamPage alloc] initWithNibName:@"TeamPage" bundle:nil];
+        [self.navigationController pushViewController:teamPageView animated:true];
+    } else {
+    	// Create Page
+        CreateEditTeam *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
+        [self.navigationController pushViewController:createEditTeamView animated:true];
+    }
 }
 
 @end

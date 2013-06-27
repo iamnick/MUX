@@ -9,7 +9,7 @@
 #import "CreateEditTeam.h"
 #import "CreateEditPlayer.h"
 #import "CustomCell.h"
-#import "Dataholder.h"
+#import "DataHolder.h"
 
 @interface CreateEditTeam ()
 
@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+    // Nav Controller
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,7 +44,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 3;
+	return 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -53,18 +55,35 @@
 	if (cell == nil) {
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:self options:nil];
         cell = [views objectAtIndex:0];
-    }    cell.textLabel.text = @"TEST";
+    }
     
+    // Cell Text
+    cell.textLabel.text = @"Add players using the icon above.";
+    
+    // Cell Font/Background
     UIFont *cellFont = [ UIFont fontWithName: @"Marker Felt" size: 17.0f];
 	cell.textLabel.font  = cellFont;
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
 
 	return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	CreateEditPlayer *createEditPlayerView = [[CreateEditPlayer alloc] initWithNibName:@"CreateEditPlayer" bundle:nil];
-	[self.navigationController pushViewController:createEditPlayerView animated:true];
+	
+}
+
+-(IBAction)onClick:(id)sender
+{
+	UIButton *button = (UIButton*)sender;
+	if (button.tag == 0) {
+    	// Add Player Button - Tag 0
+    	CreateEditPlayer *createEditPlayerView = [[CreateEditPlayer alloc] initWithNibName:@"CreateEditPlayer" bundle:nil];
+        [self.navigationController pushViewController:createEditPlayerView animated:true];
+    } else if (button.tag == 1) {
+    	// Save Team Button - Tag 1
+        [self.navigationController popViewControllerAnimated:true];
+    }
 }
 
 @end

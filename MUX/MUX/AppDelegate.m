@@ -23,9 +23,9 @@
     // Override point for customization after application launch.
     UIViewController *mainScreenView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainScreenView];
-    UIViewController *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
-    UIViewController *createEditPlayerView = [[CreateEditPlayer alloc] initWithNibName:@"CreateEditPlayer" bundle:nil];
-    UIViewController *teamPageView = [[TeamPage alloc] initWithNibName:@"TeamPage" bundle:nil];
+    //UIViewController *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
+    //UIViewController *createEditPlayerView = [[CreateEditPlayer alloc] initWithNibName:@"CreateEditPlayer" bundle:nil];
+    //UIViewController *teamPageView = [[TeamPage alloc] initWithNibName:@"TeamPage" bundle:nil];
     
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];

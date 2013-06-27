@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface GamePageFielding : UIViewController
+{
+	IBOutlet UITableView *tableView;
+    IBOutlet UIStepper *inningStepper;
+    IBOutlet UILabel *inningLabel;
+}
+
+-(IBAction)onChange:(id)sender;
 
 @end

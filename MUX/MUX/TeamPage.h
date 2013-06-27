@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface TeamPage : UIViewController
+{
+	IBOutlet UITableView *tableView;
+    IBOutlet UIButton *manageTeamButton;
+}
+
+-(IBAction)onClick:(id)sender;
 
 @end

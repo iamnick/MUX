@@ -11,5 +11,10 @@
 @interface CreateEditTeam : UIViewController
 {
 	IBOutlet UITableView *tableView;
+    IBOutlet UIButton *addPlayerButton;
+    IBOutlet UIButton *saveTeamButton;
 }
+
+-(IBAction)onClick:(id)sender;
+
 @end

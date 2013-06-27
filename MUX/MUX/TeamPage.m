@@ -7,8 +7,11 @@
 //
 
 #import "TeamPage.h"
+#import "CreateEditTeam.h"
+#import "GamePageBatting.h"
+#import "GamePageFielding.h"
 #import "CustomCell.h"
-#import "Dataholder.h"
+#import "DataHolder.h"
 
 @interface TeamPage ()
 
@@ -35,6 +38,55 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Table View Configuration
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 2;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static NSString *CellIdentifier = @"Cell";
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:self options:nil];
+        cell = [views objectAtIndex:0];
+    }
+    
+    // Cell Text
+    if (indexPath.row == 0) {
+    	cell.textLabel.text = @"Friday, June 19th";
+    } else {
+    	cell.textLabel.text = @"New Game";
+    }
+    
+    // Cell Font/Background
+    UIFont *cellFont = [UIFont fontWithName: @"Marker Felt" size: 17.0f];
+	cell.textLabel.font  = cellFont;
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
+
+	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Since we are using static dummy data, load the same view for both existing game and new game
+	UITabBarController *tabBarController=[[UITabBarController alloc] init];
+	GamePageBatting *gamePageBattingView = [[GamePageBatting alloc] initWithNibName:@"GamePageBatting" bundle:nil];
+    GamePageFielding *gamePageFieldingView = [[GamePageFielding alloc] initWithNibName:@"GamePageFielding" bundle:nil];
+    tabBarController.viewControllers = @[gamePageBattingView, gamePageFieldingView];
+    [self.navigationController pushViewController:tabBarController animated:true];
+}
+
+-(IBAction)onClick:(id)sender
+{
+	// Manage Team Button
+    CreateEditTeam *createEditTeamView = [[CreateEditTeam alloc] initWithNibName:@"CreateEditTeam" bundle:nil];
+    [self.navigationController pushViewController:createEditTeamView animated:true];
 }
 
 @end

@@ -13,7 +13,8 @@
 @property (nonatomic) NSString *teamName;
 @property (nonatomic) int numOutfielders;
 @property (nonatomic) int inningsPlayed;
-@property (nonatomic) NSArray *players;
+@property (nonatomic) NSMutableArray *players;
+@property (nonatomic) NSMutableArray *prevGames;
 
 -(id)initWithName:(NSString*)name andNumOF:(int)numOF andInningsPlayed:(int)innings andPlayers:(NSArray*)players;
 

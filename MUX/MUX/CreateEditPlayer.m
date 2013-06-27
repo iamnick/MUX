@@ -36,4 +36,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onClick:(id)sender
+{
+	// Save Button
+    [self.navigationController popViewControllerAnimated:true];
+}
+
 @end

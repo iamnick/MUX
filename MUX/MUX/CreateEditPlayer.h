@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface CreateEditPlayer : UIViewController
+{
+	IBOutlet UIButton *savePlayerButton;
+}
+
+-(IBAction)onClick:(id)sender;
 
 @end

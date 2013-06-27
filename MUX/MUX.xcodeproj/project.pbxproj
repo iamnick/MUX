@@ -37,6 +37,7 @@
 		820F6B27177B5B4E00FF444E /* DataHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B26177B5B4E00FF444E /* DataHolder.m */; };
 		820F6B2A177B5DC600FF444E /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B29177B5DC500FF444E /* Team.m */; };
 		820F6B2D177B5DD700FF444E /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B2C177B5DD700FF444E /* Player.m */; };
+		820F6B30177C066600FF444E /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 820F6B2F177C066600FF444E /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,8 @@
 		820F6B29177B5DC500FF444E /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 		820F6B2B177B5DD700FF444E /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		820F6B2C177B5DD700FF444E /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		820F6B2E177C066500FF444E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		820F6B2F177C066600FF444E /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				820F6B29177B5DC500FF444E /* Team.m */,
 				820F6B2B177B5DD700FF444E /* Player.h */,
 				820F6B2C177B5DD700FF444E /* Player.m */,
+				820F6B2E177C066500FF444E /* Game.h */,
+				820F6B2F177C066600FF444E /* Game.m */,
 			);
 			path = MUX;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 				820F6B27177B5B4E00FF444E /* DataHolder.m in Sources */,
 				820F6B2A177B5DC600FF444E /* Team.m in Sources */,
 				820F6B2D177B5DD700FF444E /* Player.m in Sources */,
+				820F6B30177C066600FF444E /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

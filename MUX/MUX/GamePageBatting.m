@@ -8,7 +8,10 @@
 
 #import "GamePageBatting.h"
 #import "CustomCell.h"
-#import "Dataholder.h"
+#import "DataHolder.h"
+#import "Team.h"
+#import "Player.h"
+#import "Game.h"
 
 @interface GamePageBatting ()
 
@@ -36,5 +39,39 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+// Table View Configuration
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	return 9;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView2 cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	static NSString *CellIdentifier = @"Cell";
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+        NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:self options:nil];
+        cell = [views objectAtIndex:0];
+    }
+    
+    // Cell Text
+    cell.textLabel.text = @"Player";
+    
+    // Cell Font/Background
+    UIFont *cellFont = [UIFont fontWithName: @"Marker Felt" size: 17.0f];
+	cell.textLabel.font  = cellFont;
+    cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
+
+	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+}
+
 
 @end
