@@ -62,10 +62,10 @@
     }
     
     // Cell Text
-    UILabel *cellLabel = (UILabel*)[cell viewWithTag:1];
-    cellLabel.text = @"Add players using the icon above.";
+    cell.textLabel.text = @"Add players using the icon above.";
     
-    // Cell Background
+    // Cell Background/Font
+    cell.textLabel.font = [UIFont fontWithName:@"Marker Felt" size:17.0f];
     cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"cellbg.png"]];
 
 	return cell;
@@ -86,6 +86,24 @@
     } else if (button.tag == 1) {
     	// Save Team Button - Tag 1
         [self.navigationController popViewControllerAnimated:true];
+    }
+}
+
+-(IBAction)valueChanged:(id)sender;
+{
+	UISlider *slider = (UISlider*)sender;
+    int discreteValue = roundl([slider value]);
+    [slider setValue:(float)discreteValue];
+    if (slider.tag == 0) {
+    	// Outfielders
+        if (discreteValue == 7) {
+        	outfieldersLabel.text = [[NSString alloc] initWithFormat:@"Outfielders: Max"];
+        } else {
+            outfieldersLabel.text = [[NSString alloc] initWithFormat:@"Outfielders: %d", discreteValue];
+        }
+    } else {
+    	// Innings
+        inningsLabel.text = [[NSString alloc] initWithFormat:@"Innings Played: %d", discreteValue];
     }
 }
 

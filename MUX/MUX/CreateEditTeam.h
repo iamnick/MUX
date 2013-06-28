@@ -13,8 +13,13 @@
 	IBOutlet UITableView *tableView;
     IBOutlet UIButton *addPlayerButton;
     IBOutlet UIButton *saveTeamButton;
+    IBOutlet UISlider *outfieldersSlider;
+    IBOutlet UISlider *inningsSlider;
+    IBOutlet UILabel *outfieldersLabel;
+    IBOutlet UILabel *inningsLabel;
 }
 
 -(IBAction)onClick:(id)sender;
+-(IBAction)valueChanged:(id)sender;
 -(void)onHomeClick;
 @end

@@ -42,12 +42,26 @@
 
 -(IBAction)onClick:(id)sender
 {
-	// Save Button
-    [self.navigationController popViewControllerAnimated:true];
+	UIButton *button = (UIButton*)sender;
+    if (button.tag == 7) {
+    	// Save Button
+    	[self.navigationController popViewControllerAnimated:true];
+    } else {
+    	if (button.tag == 1) {
+        	// Checked
+            [button setImage:[UIImage imageNamed:@"check_unselected.png"] forState:UIControlStateNormal];
+            [button setTag:0];
+        } else {
+        	// Unchecked
+            [button setImage:[UIImage imageNamed:@"check_selected.png"] forState:UIControlStateNormal];
+        	[button setTag:1];
+        }
+    }
 }
 
 -(void)onHomeClick
 {
 	[self.navigationController popToRootViewControllerAnimated:YES];
 }
+
 @end
